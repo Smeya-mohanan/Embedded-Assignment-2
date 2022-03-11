@@ -50,14 +50,14 @@ void loop()
   digitalWrite(ledPin, LOW);
   delay(500);
 }
-void task2()                                    //task2
+void task2();                                  //task2
 {buttonstate1 = digitalRead(buttonpin1);
   if(buttonstate1 ==1)
   {digitalWrite(ledPin, HIGH);}
   else
   {digitalWrite(ledPin, LOW);}
 }
-void task3()                                   //task3
+void task3();                                   //task3
 {OnCycle = pulseIn(PulseIN, HIGH, 10000);
   OffCycle = pulseIn(PulseIN, LOW, 10000);
   T = OnCycle + OffCycle;
@@ -68,24 +68,24 @@ void task3()                                   //task3
   Serial.print("Frequency = ");
   Serial.print(F);
 }
-void task4()                                  //task4
+void task4();                                  //task4
 {potValue = analogRead(potPin);
   analog_in_array[4]=analog_pin;
   for(int i=0; i<4;i++)
   {analog_in_array[i]=analog_in_array[i+1];}
   Serial.println(potValue);
 }
-void task5()                                 //task5
+void task5();                                 //task5
 {average=0;
   for(int i=0;i<4;i++)
   {average=average+analog_in_array[i];}
   average_analog_in=average/4;
 }
-void task6()                                //task6
+void task6();                                //task6
 {for(int i=0;i<1000;i++)
 {asm volatile("nop\n\t"::);}
 }
-void task7()                               //task7 & task8
+void task7();                               //task7 & task8
 {int n=0;
   int error_code= 0;
   for (int i =0;i<n; i++)
@@ -98,7 +98,7 @@ void task7()                               //task7 & task8
      {error_code =0;
      digitalWrite(ledPin, LOW);}
 } 
-void task9()                                //task9
+void task9();                                //task9
 {Serial.print("error_code");
    Serial.print(error_code);
    Serial.print(",");
