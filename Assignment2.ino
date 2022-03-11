@@ -20,14 +20,14 @@ float analog_in_array[]={0,0,0,0};
 void CycleF()
 {
   counter++;
-  if( counter % 18  )loop;              //from assignment 1 
-  if( counter % 200 )task2;            //converted to Milliseconds
-  if( counter % 1000)task3;
-  if( counter % 42)task4;
-  if( counter % 42)task5;
-  if( counter % 100)task6;
-  if( counter % 333)task7;            // task7 has both task7 & task8 
-  if( counter % 5000)task9;
+  if( counter % 18  )loop();              //from assignment 1 
+  if( counter % 200 )task2();            //converted to Milliseconds
+  if( counter % 1000)task3();
+  if( counter % 42)task4();
+  if( counter % 42)task5();
+  if( counter % 100)task6();
+  if( counter % 333)task7();            // task7 has both task7 & task8 
+  if( counter % 5000)task9();
 }
 void setup()
 {
